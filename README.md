@@ -39,7 +39,7 @@ type Actions = GetActionsType<typeof vuexOptions>;
 const store = new Vuex.Store<any>(vuexOptions)
 ```
 
-then add folder `types` and add file `folder/store.d.ts`
+then add folder `types` and add file `store.d.ts`
 
 ```
 import { Commit, Dispatch, Getters, State } from '@/store'
@@ -58,4 +58,4 @@ declare module 'vue/types/vue' {
 }
 ```
 ## Reading
-[typescript对vuex的全支持](http://wynnyo.com/archives/ts-vuex-prompt)
+[typescript对vuex的全支持](http://wynnyo.com/archives/ts-vuex)
