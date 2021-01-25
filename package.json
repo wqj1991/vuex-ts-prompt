@@ -1,13 +1,17 @@
 {
-    "name": "vuex-typescript-commit-dispatch-prompt",
-    "version": "1.1.0",
-    "description": "vuex typescript commit dispatch prompt",
-    "main": "index.ts",
-    "typings": "index.ts",
-    "scripts": {},
-    "author": "xingbofeng",
-    "license": "MIT",
-    "devDependencies": {
-        "typescript": "^4.1.0-beta"
-    }
+	"name": "vuex-ts-prompt",
+	"version": "1.0.0",
+	"description": "vuex typescript state|getters|commit|dispatch prompt",
+	"main": "index.ts",
+	"typings": "index.ts",
+	"scripts": {},
+	"author": "wynnyo",
+	"license": "MIT",
+	"devDependencies": {
+		"typescript": "^4.1.0"
+	},
+	"bugs": {
+		"url": "https://github.com/wynnyo/vuex-ts-prompt/issues"
+	},
+	"homepage": "https://github.com/wynnyo/vuex-ts-prompt"
 }

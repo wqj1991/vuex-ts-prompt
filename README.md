@@ -1,19 +1,18 @@
-# vuex-typescript-commit-dispatch-prompt
-vuex-typescript-commit-dispatch-prompt is a tool for vuex and TypeScript 4.1+。
+# vuex-ts-prompt
+vuex-ts-prompt is a tool for vuex and TypeScript 4.1+。
 
 ## Start
 
 ```
-npm install typescript@beta --save-dev
-npm i vuex-typescript-commit-dispatch-prompt --save
+npm install typescript --save-dev
+npm i vuex-ts-prompt --save
 ```
 
 then modify your store.ts
 
 ```TypeScript
 import Vuex from 'vuex';
-import createLogger from 'vuex/dist/logger';
-import { GetActionsType, GetMutationsType, GetPayLoad, GetReturnType } from 'vuex-typescript-commit-dispatch-prompt';
+import { GetActionsType, GetGettersType, GetMutationsType, GetPayLoad, GetReturnType, GetStateType } from 'vuex-ts-prompt';
 
 const vuexOptions = {
     state,
@@ -23,25 +22,40 @@ const vuexOptions = {
     modules: {
         home,
         detail,
-    },
-    plugins: process.env.NODE_ENV === 'development' ? [createLogger()] : [],
+    }
 };
+
+export type State = GetStateType<typeof vuexOptions>
+
+export type Getters = GetGettersType<typeof vuexOptions>
 
 type Mutations = GetMutationsType<typeof vuexOptions>;
 
 type Actions = GetActionsType<typeof vuexOptions>;
 
-declare module 'vuex' {
-    export interface Commit {
-        <T extends keyof Mutations>(type: T, payload?: GetPayLoad<Mutations, T>, options?: CommitOptions): GetReturnType<Mutations, T>;
-    }
-    export interface Dispatch {
-        <T extends keyof Actions>(type: T, payload?: GetPayLoad<Actions, T>, options?: DispatchOptions): Promise<GetReturnType<Actions, T>>;
-    }
-}
-
-const store = new Vuex.Store<RootState>(vuexOptions);
+// state?: S | (() => S);
+// getters?: GetterTree<S, S>;
+// 这里把 state 类型设置为 any 是为了让参数不受约束
+const store = new Vuex.Store<any>(vuexOptions)
 ```
 
+then add folder `types` and add file `folder/store.d.ts`
+
+```
+import { Commit, Dispatch, Getters, State } from '@/store'
+
+declare module 'vue/types/vue' {
+	export declare class Store<S> {
+		state: State
+		getters: Getters
+		dispatch: Dispatch
+		commit: Commit
+	}
+
+	interface Vue {
+		$store: Store<State>
+	}
+}
+```
 ## Reading
-[TypeScript 4.1 类型模板字符串实现Vuex的store.commit和store.dispatch类型判断](https://github.com/xingbofeng/xingbofeng.github.io/issues/54)
+[typescript对vuex的全支持](http://wynnyo.com/archives/ts-vuex-prompt)
