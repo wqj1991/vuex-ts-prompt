@@ -59,3 +59,39 @@ declare module 'vue/types/vue' {
 ```
 ## Reading
 [typescript对vuex的全支持](http://wynnyo.com/archives/ts-vuex)
+
+## 使用截图
+
+- 全局变量 $store
+
+  ![image-20210125121827015](http://images.wynnyo.com/Markdown/image-20210125121827015.png?x-oss-process=style/wynnyo-style)
+
+- state
+
+  ![image-20210125121850658](http://images.wynnyo.com/Markdown/image-20210125121850658.png?x-oss-process=style/wynnyo-style)
+
+  ![image-20210125122153256](http://images.wynnyo.com/Markdown/image-20210125122153256.png?x-oss-process=style/wynnyo-style)
+
+- getters
+
+  ![image-20210125122249448](http://images.wynnyo.com/Markdown/image-20210125122249448.png?x-oss-process=style/wynnyo-style)
+
+  ![image-20210125122330124](http://images.wynnyo.com/Markdown/image-20210125122330124.png?x-oss-process=style/wynnyo-style)
+
+  ![image-20210125122422204](http://images.wynnyo.com/Markdown/image-20210125122422204.png?x-oss-process=style/wynnyo-style)
+
+- commit
+
+  ![image-20210125122538834](http://images.wynnyo.com/Markdown/image-20210125122538834.png?x-oss-process=style/wynnyo-style)
+
+  ![image-20210125122616232](http://images.wynnyo.com/Markdown/image-20210125122616232.png?x-oss-process=style/wynnyo-style)
+
+  ![image-20210125122648042](http://images.wynnyo.com/Markdown/image-20210125122648042.png?x-oss-process=style/wynnyo-style)
+
+- dispatch
+
+  ![image-20210125122737544](http://images.wynnyo.com/Markdown/image-20210125122737544.png?x-oss-process=style/wynnyo-style)
+
+  ![image-20210125122803347](http://images.wynnyo.com/Markdown/image-20210125122803347.png?x-oss-process=style/wynnyo-style)
+
+  ![image-20210125122834526](http://images.wynnyo.com/Markdown/image-20210125122834526.png?x-oss-process=style/wynnyo-style)
