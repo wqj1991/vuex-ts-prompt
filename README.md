@@ -1,6 +1,11 @@
 # vuex-ts-prompt
 vuex-ts-prompt is a tool for vuex and TypeScript 4.1+。
 
+## thanks
+
+- [陪尤雨溪一起，实现 Vuex 无限层级类型推断。（TS 4.1 新特性） - SegmentFault 思否](https://segmentfault.com/a/1190000023931783)
+- [xingbofeng/vuex-typescript-commit-dispatch-prompt: vuex typescript commit dispatch prompt (github.com)](https://github.com/xingbofeng/vuex-typescript-commit-dispatch-prompt)
+
 ## Start
 
 ```
